@@ -286,3 +286,26 @@ h6 {
     border-color: var(--primary-color);
     outline: none;
 }
+
+/* Marquee Animation */
+.marquee-container {
+    width: 100%;
+}
+
+.marquee-content {
+    animation: marquee-scroll 25s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
