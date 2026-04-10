@@ -1,0 +1,288 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-dark: #0f1115;
+    --text-muted: #8b949e;
+    --primary-color: #4ade80;
+    /* Green for button */
+    --primary-hover: #22c55e;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+.bg-dark-custom {
+    background-color: var(--bg-dark) !important;
+}
+
+.text-muted-custom {
+    color: var(--text-muted) !important;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(15, 17, 21, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 0.5rem 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff !important;
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 90vh;
+    padding-top: 80px;
+    /* Account for fixed nav */
+}
+
+.hero-text h1 {
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    box-shadow: 0 4px 14px rgba(74, 222, 128, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.6);
+    color: #111;
+}
+
+.profile-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 8px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Brands Section */
+.border-dark-subtle {
+    border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.tracking-wider {
+    letter-spacing: 0.1em;
+}
+
+.brands-logos {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+    cursor: default;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+}
+
+/* Case Studies */
+.badge {
+    padding: 0.5em 1em;
+    font-size: 0.75rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    border-radius: 50px;
+}
+
+.badge-fintech {
+    background-color: #fff7ed;
+    color: #f97316;
+}
+
+.badge-edtech {
+    background-color: #eff6ff;
+    color: #3b82f6;
+}
+
+.badge-pharma {
+    background-color: #f0fdf4;
+    color: #22c55e;
+}
+
+.btn-fintech {
+    background-color: #f9a826;
+    color: #fff;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-fintech:hover {
+    background-color: #ea580c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-edtech {
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-edtech:hover {
+    background-color: #1d4ed8;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-pharma {
+    background-color: #10b981;
+    color: #fff;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn-pharma:hover {
+    background-color: #059669;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+.case-study-row img {
+    transition: transform 0.4s ease;
+}
+
+.case-study-row:hover img {
+    transform: scale(1.02);
+}
+
+/* Testimonials */
+.testimonial-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    border-color: transparent;
+    background:
+        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(212, 175, 55, 0.103) 100%) padding-box,
+        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(212, 175, 55, 0.156) 100%) border-box;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+}
+
+/* Project Cards */
+.project-card {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    border-color: transparent;
+    background:
+        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(13, 202, 240, 0.103) 100%) padding-box,
+        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(13, 202, 240, 0.156) 100%) border-box;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.25);
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Recent Work */
+.work-card img {
+    transition: transform 0.4s ease;
+}
+
+.work-card:hover img {
+    transform: scale(1.03);
+}
+
+.carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #dee2e6;
+    color: #6c757d;
+}
+
+.carousel-nav-btn:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+/* Contact Form */
+.form-control-custom {
+    background-color: #fff;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.form-control-custom:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 222, 128, 0.25);
+    border-color: var(--primary-color);
+    outline: none;
+}
