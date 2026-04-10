@@ -1,311 +1,331 @@
-html {
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-:root {
-    --bg-dark: #0f1115;
-    --text-muted: #8b949e;
-    --primary-color: #4ade80;
-    /* Green for button */
-    --primary-hover: #22c55e;
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Inter', sans-serif;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vipin M</title>
 
-body {
-    font-family: var(--font-body);
-    background-color: var(--bg-dark);
-    color: #fff;
-    -webkit-font-smoothing: antialiased;
-}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-.bg-dark-custom {
-    background-color: var(--bg-dark) !important;
-}
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
-.text-muted-custom {
-    color: var(--text-muted) !important;
-}
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* Navigation */
-.navbar {
-    background-color: rgba(15, 17, 21, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
+<body>
 
-.navbar-nav .nav-link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.7) !important;
-    padding: 0.5rem 1.2rem;
-    transition: color 0.3s ease;
-}
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top py-3">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item ms-lg-4">
+                        <div class="social-icons">
+                            <a
+                                href="https://www.linkedin.com/in/vipin-m-12b53b28b?utm_source=share_via&utm_content=profile&utm_medium=member_ios"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:vipinm8086@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #fff !important;
-}
 
-.social-icons a {
-    color: rgba(255, 255, 255, 0.6);
-    margin-left: 1rem;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
-}
 
-.social-icons a:hover {
-    color: #fff;
-}
 
-/* Hero Section */
-.hero-section {
-    min-height: 90vh;
-    padding-top: 80px;
-    /* Account for fixed nav */
-}
+        </div>
+    </nav>
 
-.hero-text h1 {
-    letter-spacing: -1px;
-    line-height: 1.2;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero-section bg-dark-custom text-white d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 hero-text pe-lg-5" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold mb-4">Vipin M</h1>
+                    <p class="lead text-muted-custom mb-5">
+                        Results-driven HR Analyst specializing in Learning & Development, HR reporting, and performance
+                        tracking. Strong expertise in Microsoft Excel and Power BI for data analysis. Proven ability to
+                        support strategic HR decisions and improve workforce performance.
+                    </p>
+                    <a href="CV.pdf" download="Vipin_M_CV.pdf"
+                        class="btn btn-primary-custom btn-lg rounded-pill px-5 py-3 fw-semibold">
+                        Download CV
+                    </a>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0 text-center" data-aos="fade-left">
+                    <div class="profile-image-container">
+                        <img src="profile1.jpeg" alt="Profile" class="img-fluid rounded-circle profile-img shadow-lg"
+                            style="object-fit: cover; width: 400px; height: 400px; object-position: top;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.hero-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
+    <!-- Brands Logo Strip -->
+    <section class="brands-section bg-dark-custom py-4 border-top border-bottom border-dark-subtle">
+        <div class="container">
+            <p class="text-center text-muted-custom mb-4 small fw-semibold text-uppercase tracking-wider">Core
+                Competencies
+            </p>
+            <div class="marquee-container opacity-50 overflow-hidden d-flex align-items-center py-2">
+                <div class="marquee-content d-flex flex-shrink-0 align-items-center gap-5 pe-5 brands-logos">
+                    <div class="brand-logo fw-bold"><i class="fas fa-chalkboard-teacher me-2"></i> Training &
+                        Development</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-user-tie me-2"></i> Employee Development</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-comments me-2"></i> Communication</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-users me-2"></i> Team Collaboration</div>
+                </div>
+                <!-- Duplicate group for infinite scroll -->
+                <div class="marquee-content d-flex flex-shrink-0 align-items-center gap-5 pe-5 brands-logos"
+                    aria-hidden="true">
+                    <div class="brand-logo fw-bold"><i class="fas fa-chalkboard-teacher me-2"></i> Training &
+                        Development</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-user-tie me-2"></i> Employee Development</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-comments me-2"></i> Communication</div>
+                    <div class="brand-logo fw-bold"><i class="fas fa-users me-2"></i> Team Collaboration</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.btn-primary-custom {
-    background-color: var(--primary-color);
-    color: #111;
-    border: none;
-    box-shadow: 0 4px 14px rgba(74, 222, 128, 0.4);
-    transition: all 0.3s ease;
-}
+    <!-- Case Studies Section -->
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-white text-dark">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5 pb-4">
+                <div class="col-lg-7 text-center" data-aos="fade-up">
+                    <h2 class="display-6 fw-bold mb-3 text-black">Work Experience</h2>
+                    <p class="text-muted">
+                        My professional journey in Human Resources and Marketing, delivering impactful insights and
+                        coordinating vital programs.
+                    </p>
+                </div>
+            </div>
 
-.btn-primary-custom:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(74, 222, 128, 0.6);
-    color: #111;
-}
+            <!-- Experience 1 -->
+            <div class="row align-items-center case-study-row mb-5 pb-5" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-5 pe-lg-5 mb-4 mb-lg-0">
+                    <span class="badge badge-fintech mb-3">AM Motors</span>
+                    <h3 class="h2 fw-bold mb-3 text-black">Human Resources Analyst</h3>
+                    <p class="text-muted mb-4">
+                        <strong>March 2024 – Present | Malappuram, Kerala</strong><br><br>
+                        Analyzed HR data including employee turnover, absenteeism, recruitment metrics, and payroll
+                        reports to support management decisions. Generated monthly and quarterly HR dashboards and MIS
+                        reports for leadership review, and monitored recruitment KPIs.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <img src="HR logo.PNG" alt="HR Analyst Work" class="img-fluid rounded-4 shadow-sm w-100">
+                </div>
+            </div>
 
-.profile-img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border: 8px solid rgba(255, 255, 255, 0.05);
-}
+            <!-- Experience 2 -->
+            <div class="row align-items-center case-study-row mb-5 pb-5 flex-lg-row-reverse" data-aos="fade-up"
+                data-aos-delay="100">
+                <div class="col-lg-5 ps-lg-5 mb-4 mb-lg-0">
+                    <span class="badge badge-edtech mb-3">INMAKES INFOTECH Pvt Ltd</span>
+                    <h3 class="h2 fw-bold mb-3 text-black">Assistant Team Leader – Marketing</h3>
+                    <p class="text-muted mb-4">
+                        <strong>August 2023 – March 2024 | Kochi, Kerala</strong><br><br>
+                        Coordinated team activities and project timelines. Supported B2B operations and marketing
+                        campaigns. Implemented various marketing initiatives to improve outreach and assisted in
+                        performance tracking and reporting.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <img src="sales logo.jpeg" alt="Marketing Leadership" class="img-fluid rounded-4 shadow-sm w-100">
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Brands Section */
-.border-dark-subtle {
-    border-color: rgba(255, 255, 255, 0.05) !important;
-}
+    <!-- Testimonials Section -->
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-dark-custom text-white border-top border-dark-subtle">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6 text-center" data-aos="fade-up">
+                    <h2 class="display-6 fw-bold mb-3">Education</h2>
+                    <p class="text-muted-custom">
+                        My academic background and qualifications.
+                    </p>
+                </div>
+            </div>
 
-.tracking-wider {
-    letter-spacing: 0.1em;
-}
+            <div class="row g-4 justify-content-center">
+                <!-- Education 1 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="testimonial-card p-4 h-100">
+                        <i class="fas fa-graduation-cap text-muted-custom fs-4 mb-3 opacity-50"></i>
+                        <p class="text-white mb-4 lh-lg fw-semibold fs-5">
+                            Master of Business Administration (MBA)
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <h6 class="mb-0 fw-bold text-white-50">University of Calicut | 2021 – 2023</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Education 2 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="testimonial-card p-4 h-100">
+                        <i class="fas fa-graduation-cap text-muted-custom fs-4 mb-3 opacity-50"></i>
+                        <p class="text-white mb-4 lh-lg fw-semibold fs-5">
+                            Bachelor of Business Administration (BBA)
+                        </p>
+                        <div class="d-flex align-items-center gap-3">
+                            <h6 class="mb-0 fw-bold text-white-50">Govt Arts and Science College Mankada | 2018 – 2021
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.brands-logos {
-    font-family: var(--font-heading);
-    font-weight: 600;
-}
+    <!-- Recent Work Section -->
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-white text-dark">
+        <div class="container py-5 position-relative">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-lg-6 text-center" data-aos="fade-up">
+                    <h2 class="display-6 fw-bold mb-3 text-black">Technical Skills & More</h2>
+                    <p class="text-muted">
+                        Tools, software, and other activities I excel at.
+                    </p>
+                </div>
+            </div>
 
-.brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.2rem;
-    transition: opacity 0.3s ease;
-    cursor: default;
-}
+            <div class="row g-5 justify-content-center">
+                <!-- Skill 1 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="work-card border rounded-4 p-4 shadow-sm h-100">
+                        <h4 class="fw-bold mb-3 text-black"><i class="fas fa-laptop-code text-primary-custom me-2"></i>
+                            Software Skills</h4>
+                        <ul class="text-muted mb-4 pe-lg-4 fs-6 lh-lg">
+                            <li><strong>Advanced Microsoft Excel</strong></li>
+                            <li><strong>Power BI</strong> (Data Cleaning, Power Query, Dashboard Creation)</li>
+                            <li><strong>Microsoft PowerPoint</strong></li>
+                            <li>HR Dashboards & Metrics</li>
+                            <li>Report Preparation & Performance Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="work-card border rounded-4 p-4 shadow-sm h-100">
+                        <h4 class="fw-bold mb-3 text-black"><i class="fas fa-language text-primary-custom me-2"></i>
+                            Languages & Extras</h4>
+                        <p class="text-dark mb-1 pe-lg-4 fs-6 fw-bold">Languages:</p>
+                        <p class="text-muted mb-4 pe-lg-4 fs-6">English | Malayalam</p>
+                        <p class="text-dark mb-1 pe-lg-4 fs-6 fw-bold">Extracurricular Activities:</p>
+                        <ul class="text-muted mb-0 pe-lg-4 fs-6 lh-lg">
+                            <li>National Service Scheme (NSS) Volunteer</li>
+                            <li>Won 2nd Prize in Marketing Game – Intra College Management Fest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.brand-logo:hover {
-    opacity: 1;
-}
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-dark-custom text-white border-top border-dark-subtle">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-6 text-center" data-aos="fade-up">
+                    <h2 class="display-6 fw-bold mb-3">Projects & Reports</h2>
+                    <p class="text-muted-custom">
+                        Some of my recent reports and dashboards.
+                    </p>
+                </div>
+            </div>
 
-/* Case Studies */
-.badge {
-    padding: 0.5em 1em;
-    font-size: 0.75rem;
-    font-family: var(--font-heading);
-    letter-spacing: 0.05em;
-    border-radius: 50px;
-}
+            <div class="row g-4 justify-content-center">
+                <!-- Project Card 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card p-4 h-100 d-flex flex-column">
+                        <i class="fas fa-file-alt text-primary-custom fs-4 mb-3"></i>
+                        <h4 class="text-white mb-3 fw-bold">Sales Team Leaders Incentive Report</h4>
+                        <p class="text-white-50 mb-4 flex-grow-1">
+                            This report presents a comprehensive analysis of the sales team's performance, focusing on
+                            key
+                            metrics, trends, and actionable insights to drive future growth.
+                        </p>
+                        <a href="https://app.fabric.microsoft.com/links/rWq1rcR0aI?ctid=3b63f10b-d327-4a6c-a33c-a9299b7154d1&pbi_source=linkShare"
+                            target="_blank"
+                            class="btn btn-outline-light mt-auto align-self-start rounded-pill px-4">View Report</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card p-4 h-100 d-flex flex-column">
+                        <i class="fas fa-chart-pie text-primary-custom fs-4 mb-3"></i>
+                        <h4 class="text-white mb-3 fw-bold">Human Resources Attrition Report</h4>
+                        <p class="text-white-50 mb-4 flex-grow-1">
+                            This report provides a comprehensive analysis of employee attrition, identifying key
+                            drivers, trends, and actionable insights to improve retention and organizational
+                            stability.
+                        </p>
+                        <a href="https://app.fabric.microsoft.com/links/AwPZEykgUf?ctid=3b63f10b-d327-4a6c-a33c-a9299b7154d1&pbi_source=linkShare"
+                            target="_blank"
+                            class="btn btn-outline-light mt-auto align-self-start rounded-pill px-4">View Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.badge-fintech {
-    background-color: #fff7ed;
-    color: #f97316;
-}
 
-.badge-edtech {
-    background-color: #eff6ff;
-    color: #3b82f6;
-}
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-center border-top border-dark-subtle" style="background-color: #000 !important;">
+        <div class="container">
+            <p class="mb-0 text-white-50 small">Made with <span class="text-danger">❤</span></p>
+        </div>
+    </footer>
 
-.badge-pharma {
-    background-color: #f0fdf4;
-    color: #22c55e;
-}
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-.btn-fintech {
-    background-color: #f9a826;
-    color: #fff;
-    border-radius: 0;
-    transition: all 0.3s ease;
-}
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    </script>
+</body>
 
-.btn-fintech:hover {
-    background-color: #ea580c;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.btn-edtech {
-    background-color: #2563eb;
-    color: #fff;
-    border-radius: 0;
-    transition: all 0.3s ease;
-}
-
-.btn-edtech:hover {
-    background-color: #1d4ed8;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.btn-pharma {
-    background-color: #10b981;
-    color: #fff;
-    border-radius: 0;
-    transition: all 0.3s ease;
-}
-
-.btn-pharma:hover {
-    background-color: #059669;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.fs-7 {
-    font-size: 0.8rem;
-}
-
-.case-study-row img {
-    transition: transform 0.4s ease;
-}
-
-.case-study-row:hover img {
-    transform: scale(1.02);
-}
-
-/* Testimonials */
-.testimonial-card {
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.02);
-    transition: all 0.3s ease;
-    height: 100%;
-}
-
-.testimonial-card:hover {
-    border-color: transparent;
-    background:
-        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(212, 175, 55, 0.103) 100%) padding-box,
-        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(212, 175, 55, 0.156) 100%) border-box;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
-}
-
-/* Project Cards */
-.project-card {
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.02);
-    transition: all 0.3s ease;
-    height: 100%;
-}
-
-.project-card:hover {
-    border-color: transparent;
-    background:
-        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(13, 202, 240, 0.103) 100%) padding-box,
-        linear-gradient(135deg, rgba(15, 17, 21, 1) 0%, rgba(13, 202, 240, 0.156) 100%) border-box;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.25);
-}
-
-.text-white-50 {
-    color: rgba(255, 255, 255, 0.6) !important;
-}
-
-/* Recent Work */
-.work-card img {
-    transition: transform 0.4s ease;
-}
-
-.work-card:hover img {
-    transform: scale(1.03);
-}
-
-.carousel-nav-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-color: #dee2e6;
-    color: #6c757d;
-}
-
-.carousel-nav-btn:hover {
-    background-color: #f8f9fa;
-    color: #000;
-}
-
-/* Contact Form */
-.form-control-custom {
-    background-color: #fff;
-    border: none;
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
-    font-size: 0.95rem;
-}
-
-.form-control-custom:focus {
-    box-shadow: 0 0 0 0.25rem rgba(74, 222, 128, 0.25);
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-/* Marquee Animation */
-.marquee-container {
-    width: 100%;
-}
-
-.marquee-content {
-    animation: marquee-scroll 25s linear infinite;
-    white-space: nowrap;
-}
-
-.marquee-container:hover .marquee-content {
-    animation-play-state: paused;
-}
-
-@keyframes marquee-scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
+</html>
